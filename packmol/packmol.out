@@ -53,8 +53,8 @@
   Packing:|0                                                             100%|
           |******************************************
 
-  Restraint-only function value:    3.1998494417711675E-006
-  Maximum violation of the restraints:    1.7764372354367830E-006
+  Restraint-only function value:    3.1998494405300796E-006
+  Maximum violation of the restraints:    1.7764372350677361E-006
 
 --------------------------------------------------------------------------------
 
@@ -80,7 +80,7 @@
 
 ################################################################################
 
-  Objective function at initial point:    3668.7973283764768     
+  Objective function at initial point:    3668.7973283764763     
 
 ################################################################################
 
@@ -98,13 +98,13 @@
           |******************************************************************|
           |******************************************************************|
 
-  Function value from last GENCAN loop: f = .49206E-01
+  Function value from last GENCAN loop: f = .61283E-01
   Best function value before: f = .36688E+04
   Improvement from best function value:    99.99 %
   Improvement from last loop:    99.99 %
   Maximum violation of target distance:     0.000000
-  Maximum violation of the constraints: .14109E-01
-  All-type function value: .49206E-01
+  Maximum violation of the constraints: .20456E-01
+  All-type function value: .61283E-01
 
 --------------------------------------------------------------------------------
 
@@ -117,18 +117,18 @@
   Packing:|0                                                             100%|
           |*********************
 
-  Function value from last GENCAN loop: f = .12966E-01
-  Best function value before: f = .49206E-01
-  Improvement from best function value:    73.65 %
-  Improvement from last loop:    73.65 %
+  Function value from last GENCAN loop: f = .11591E-01
+  Best function value before: f = .61283E-01
+  Improvement from best function value:    81.09 %
+  Improvement from last loop:    81.09 %
   Maximum violation of target distance:     0.000000
-  Maximum violation of the constraints: .40200E-02
+  Maximum violation of the constraints: .33236E-02
   Current structure written to file: water_box.xyz
 --------------------------------------------------------------------------------
   Packing solved for molecules of type           1
-  Objective function value:    1.2965752107895087E-002
+  Objective function value:    1.1591031297619464E-002
   Maximum violation of target distance:    0.0000000000000000     
-  Max. constraint violation:    4.0199938920843304E-003
+  Max. constraint violation:    3.3235653512825873E-003
 --------------------------------------------------------------------------------
 
 ################################################################################
@@ -145,9 +145,9 @@
 ################################################################################
 
                                  Success! 
-              Final objective function value: .19194E-01
+              Final objective function value: .27143E-01
               Maximum violation of target distance:   0.000000
-              Maximum violation of the constraints: .40200E-02
+              Maximum violation of the constraints: .33236E-02
 
 --------------------------------------------------------------------------------
 
@@ -160,7 +160,7 @@
 
 ################################################################################
 
-   Running time:    9.89799947E-03  seconds. 
+   Running time:    1.08250007E-02  seconds. 
 
 --------------------------------------------------------------------------------
 

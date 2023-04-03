@@ -1,0 +1,40 @@
+&control
+  title = 'Water 32 molecules',
+  calculation = 'cp',
+  restart_mode = 'from_scratch',
+  ndw = 50,                                      ! number directory write
+  nstep = 25,                                    ! number of steps of the run
+  iprint = 10,                                   ! frequency for printing the quantities
+  isave = 1000,                                  ! frequency for wrting a restart file
+  tprnfor = .TRUE.,                              ! compute the forces
+  dt = 5.0d0,                                    ! timestep in Hartree atomic units
+  prefix = 'H2O',
+  pseudo_dir='/home/maglab1/ACuoghi/QE/pseudo/', ! pseudopotential directory
+  outdir='/home/maglab1/ACuoghi/QE/H2O/',        ! output directory
+/
+
+&system
+  ibrav=1, celldm(1)=10.0                        ! cubic lattice of side celldm(1) in Bohr radius
+  nat = 96,                                      ! number of atoms
+  ntyp = 2,                                      ! type of atoms
+  ecutwfc = 50.0,                                ! kinetic energy cutoff (Ry) for wavefunctions
+/
+
+&electrons
+  electron_dynamics = 'cg',
+/
+ 
+&ions
+  ion_dynamics = 'verlet',
+  ion_velocities = 'random',                     ! sampling the Boltzmann's distribution at a given 
+  tempw=600.d0                                   ! temperature 
+/
+ 
+ATOMIC_SPECIES
+ O  16.0d0   O_ONCV_PBE-1.2.upf
+ H  1.0079d0 H_ONCV_PBE-1.2.upf
+
+ATOMIC_POSITIONS (angstrom)
+ O            9.498370        3.721840        2.768978
+ H            9.945279        3.356063        3.585357
+ H            8.536024        3.472563        2.877363
