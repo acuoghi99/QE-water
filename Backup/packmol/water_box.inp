@@ -1,0 +1,8 @@
+tolerance 2.00
+filetype xyz
+output water_box.xyz
+
+structure water.xyz
+  number 32
+inside cube 0. 0. 0. 7.99
+end structure
