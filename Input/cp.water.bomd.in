@@ -3,17 +3,17 @@
   calculation = 'cp',
   restart_mode = 'from_scratch',
   ndw = 50,                                                  ! number directory write
-  nstep = 100,                                                ! number of steps of the run
+  nstep = 50,                                                ! number of steps of the run
   iprint = 5,                                                ! frequency for printing the quantities
   isave = 1000,                                              ! frequency for wrting a restart file
   tprnfor = .TRUE.,                                          ! compute the forces
   dt = 5.00d0,                                               ! timestep in Hartree atomic units
-  etot_conv_thr = 1.0d-3,                                    ! convergence threshold on total energy for ionic minimization 
+  etot_conv_thr = 1.0d-5,                                    ! convergence threshold on total energy for ionic minimization 
   ekin_conv_thr = 1.0d-5,                                    ! convergence criterion for electron minimization
   forc_conv_thr = 1.0d-3,                                    ! convergence threshold on forces for ionic minimization
   prefix = 'H2O',
-  pseudo_dir='/home/maglab1/ACuoghi/QE/H2O/pseudo/', ! pseudopotential directory
-  outdir='/home/maglab1/ACuoghi/QE/H2O/Output/',               ! output directory
+  pseudo_dir='/home/acuoghi/Programmazione/LQSM/Water/QE-water/pseudo/', ! pseudopotential directory
+  outdir='/home/acuoghi/Programmazione/LQSM/Water/QE-water/Output/',               ! output directory
 /
 
 &system
@@ -136,6 +136,6 @@ ATOMIC_POSITIONS (angstrom)
   H            6.172143        0.002599        2.893579
 
 AUTOPILOT
-  on_step=20 : dt = 25.00d0
-  on_step=90 : dt = 5.00d0
+  on_step=20 : dt = 50.00d0
+  on_step=45 : dt = 5.00d0
 ENDRULES
