@@ -3,8 +3,8 @@
   calculation = 'cp',
   restart_mode = 'from_scratch',
   ndw = 50,                                                  ! number directory write
-  nstep = 50,                                                ! number of steps of the run
-  iprint = 5,                                                ! frequency for printing the quantities
+  nstep = 300,                                               ! number of steps of the run
+  iprint = 10,                                               ! frequency for printing the quantities
   isave = 1000,                                              ! frequency for wrting a restart file
   tprnfor = .TRUE.,                                          ! compute the forces
   dt = 5.00d0,                                               ! timestep in Hartree atomic units
@@ -12,15 +12,15 @@
   ekin_conv_thr = 1.0d-5,                                    ! convergence criterion for electron minimization
   forc_conv_thr = 1.0d-3,                                    ! convergence threshold on forces for ionic minimization
   prefix = 'H2O',
-  pseudo_dir='/home/acuoghi/Programmazione/LQSM/Water/QE-water/pseudo/', ! pseudopotential directory
-  outdir='/home/acuoghi/Programmazione/LQSM/Water/QE-water/Output/',               ! output directory
+  pseudo_dir='/home/maglab1/ACuoghi/QE/H2O/pseudo/',         ! pseudopotential directory
+  outdir='/home/maglab1/ACuoghi/QE/H2O/Output/',             ! output directory
 /
 
 &system
   ibrav=1, celldm(1)=18.88                                   ! cubic lattice of side celldm(1) in Bohr radius
   nat = 96,                                                  ! number of atoms
   ntyp = 2,                                                  ! type of atoms
-  ecutwfc = 50.00,                                            ! kinetic energy cutoff (Ry) for wavefunctions
+  ecutwfc = 60.00,                                           ! kinetic energy cutoff (Ry) for wavefunctions
 /
 
 &electrons
@@ -134,8 +134,3 @@ ATOMIC_POSITIONS (angstrom)
   O            6.874337        0.263384        3.556083
   H            6.489769        0.006618        4.442748
   H            6.172143        0.002599        2.893579
-
-AUTOPILOT
-  on_step=20 : dt = 50.00d0
-  on_step=45 : dt = 5.00d0
-ENDRULES

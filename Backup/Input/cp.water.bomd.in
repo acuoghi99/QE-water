@@ -2,22 +2,25 @@
   title = 'Water 32 molecules',
   calculation = 'cp',
   restart_mode = 'from_scratch',
-  ndw = 50,                                      ! number directory write
-  nstep = 25,                                    ! number of steps of the run
-  iprint = 5,                                    ! frequency for printing the quantities
-  isave = 1000,                                  ! frequency for wrting a restart file
-  tprnfor = .TRUE.,                              ! compute the forces
-  dt = 5.00d0,                                   ! timestep in Hartree atomic units
+  ndw = 50,                                                  ! number directory write
+  nstep = 200,                                               ! number of steps of the run
+  iprint = 5,                                               ! frequency for printing the quantities
+  isave = 1000,                                              ! frequency for wrting a restart file
+  tprnfor = .TRUE.,                                          ! compute the forces
+  dt = 5.00d0,                                               ! timestep in Hartree atomic units
+  etot_conv_thr = 1.0d-5,                                    ! convergence threshold on total energy for ionic minimization 
+  ekin_conv_thr = 1.0d-5,                                    ! convergence criterion for electron minimization
+  forc_conv_thr = 1.0d-3,                                    ! convergence threshold on forces for ionic minimization
   prefix = 'H2O',
-  pseudo_dir=/home/maglab1/ACuoghi/QE/H2O/pseudo/, ! pseudopotential directory
-  outdir=/home/maglab1/ACuoghi/QE/H2O/Output/,  ! output directory
+  pseudo_dir='/home/maglab1/ACuoghi/QE/H2O/pseudo/',         ! pseudopotential directory
+  outdir='/home/maglab1/ACuoghi/QE/H2O/Output/',             ! output directory
 /
 
 &system
-  ibrav=1, celldm(1)=18.88                       ! cubic lattice of side celldm(1) in Bohr radius
-  nat = 96,                                      ! number of atoms
-  ntyp = 2,                                      ! type of atoms
-  ecutwfc = 50.0,                                ! kinetic energy cutoff (Ry) for wavefunctions
+  ibrav=1, celldm(1)=18.88                                   ! cubic lattice of side celldm(1) in Bohr radius
+  nat = 96,                                                  ! number of atoms
+  ntyp = 2,                                                  ! type of atoms
+  ecutwfc = 60.00,                                           ! kinetic energy cutoff (Ry) for wavefunctions
 /
 
 &electrons
@@ -26,8 +29,8 @@
 
 &ions
   ion_dynamics = 'verlet',
-  ion_velocities = 'random',                     ! sampling the Boltzmann's distribution at a given 
-  tempw = 600.0d0                                ! temperature 
+  ion_velocities = 'random',                                 ! sampling the Boltzmann's distribution at a given 
+  tempw = 300.00d0                                           ! temperature 
 /
 
 ATOMIC_SPECIES
