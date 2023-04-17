@@ -3,17 +3,17 @@
   calculation = 'cp',                    ! type of calculation to be performed
   restart_mode = 'from_scratch',         ! how to start the simulation
   ndw = 50,                              ! number directory write
-  nstep = 100,                           ! number of Car-Parrinello steps performed in this run
+  nstep = 150,                           ! number of Car-Parrinello steps performed in this run
   iprint = 10,                           ! frequency for writing the relevant quantities
-  isave = 20,                            ! frequency for writing the restart file
+  isave = 50,                            ! frequency for writing the restart file
   tprnfor = .TRUE.,                      ! print forces
-  dt = 5.00d0,                           ! timestep in atomic units
+  dt = 20.00d0,                          ! timestep in atomic units
   etot_conv_thr = 1.0d-5,                ! convergence threshold on total energy for ionic minimization
   ekin_conv_thr = 1.0d-5,                ! convergence criterion for electron minimization
   forc_conv_thr = 1.0d-3,                ! convergence threshold on forces for ionic minimization
   prefix = H2O,                          ! prepend the prefix to input/output filenames and restart folders
-  pseudo_dir = '/home/acuoghi/Programmazione/LQSM/Water/QE-water/pseudo/', ! pseudopotential directory
-  outdir = '/home/acuoghi/Programmazione/LQSM/Water/QE-water/Output/', ! output directory
+  pseudo_dir = '/home/maglab1/ACuoghi/QE/H2O/pseudo/', ! pseudopotential directory
+  outdir = '/home/maglab1/ACuoghi/QE/H2O/Output/', ! output directory
 / 
 
 &SYSTEM
@@ -30,7 +30,7 @@
 
 &IONS
   ion_dynamics = 'verlet',               ! set how ions are moving
-  ion_velocities = 'random',             ! ionic velocities
+  ion_velocities = 'random',             ! set the ionic velocities
   tempw = 400.00d0,                      ! ionic temperature in K
 / 
 

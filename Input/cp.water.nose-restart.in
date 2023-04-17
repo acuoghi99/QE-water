@@ -1,0 +1,141 @@
+&CONTROL
+  title = 'Water 32 molecules',          ! title of the run
+  calculation = 'cp',                    ! type of calculation to be performed
+  restart_mode = 'restart',              ! how to start the simulation
+  ndr = 51,                              ! number directory read
+  ndw = 51,                              ! number directory write
+  nstep = 300,                           ! number of Car-Parrinello steps performed in this run
+  iprint = 40,                           ! frequency for writing the relevant quantities
+  isave = 50,                            ! frequency for writing the restart file
+  tprnfor = .TRUE.,                      ! print forces
+  dt = 5.00d0,                           ! timestep in atomic units
+  etot_conv_thr = 1.0d-5,                ! convergence threshold on total energy for ionic minimization
+  ekin_conv_thr = 1.0d-5,                ! convergence criterion for electron minimization
+  forc_conv_thr = 1.0d-3,                ! convergence threshold on forces for ionic minimization
+  prefix = H2O,                          ! prepend the prefix to input/output filenames and restart folders
+  pseudo_dir = '/home/maglab1/ACuoghi/QE/H2O/pseudo/', ! pseudopotential directory
+  outdir = '/home/maglab1/ACuoghi/QE/H2O/Output/', ! output directory
+/ 
+
+&SYSTEM
+  ibrav = 1,                             ! Bravais lattice
+  celldm(1) = 18.88,                     ! 'a' crystallographic constant in a.u.
+  nat = 96,                              ! number of atoms
+  ntyp = 2,                              ! type of atoms
+  ecutwfc = 60.00,                       ! kinetic energy cutoff (Ry) for wavefunctions
+/ 
+
+&ELECTRONS
+  electron_dynamics = 'verlet',          ! set how electrons are moving
+  emass = 50.d0,                         ! effective electron mass in the CP Lagrangian in a.u.
+/ 
+
+&IONS
+  ion_dynamics = 'verlet',               ! set how ions are moving
+  ion_temperature = 'nose',              ! set how to control the temperature of the ions
+  tempw = 400.d0,                        ! ionic temperature in K
+  fnosep = 10.0,                         ! oscillation frequency of the Nosé–Hoover thermostat (in THz)
+  nhpcl = 3,                             ! number of thermostats in the Nosé–Hoover chain
+/ 
+
+ATOMIC_SPECIES
+  O  16.000d0  O_ONCV_PBE-1.2.upf
+  H  1.0079d0  H_ONCV_PBE-1.2.upf
+
+ATOMIC_POSITIONS (angstrom)
+  O            7.750485        2.289933        2.270361
+  H            8.018050        2.082684        3.211346
+  H            6.830328        1.908519        2.181875
+  O            5.979521        0.462586        0.788430
+  H            5.368354        0.424717       -0.002162
+  H            6.861166        0.145634        0.438805
+  O            7.215246        3.979233        3.934661
+  H            7.994572        3.818117        4.540209
+  H            7.622810        4.318617        3.086896
+  O            1.984377        3.300947        6.830257
+  H            2.816984        3.806808        7.055790
+  H            2.259338        2.680987        6.095382
+  O            2.483177        2.515029        3.619154
+  H            2.182881        3.246061        3.006447
+  H            3.302620        2.879698        4.061335
+  O            7.577696        7.581324       -0.011982
+  H            7.999145        7.996298        0.794351
+  H            6.625051        7.883743        0.019739
+  O            0.452953        0.866156        4.258189
+  H            1.401625        0.717777        4.537476
+  H           -0.003287       -0.002866        4.449604
+  O            7.400220        8.012486        7.284399
+  H            7.076637        7.486097        6.498139
+  H            6.658829        7.946459        7.952213
+  O            0.044046        4.129331        4.969064
+  H            0.289664        3.222962        4.625316
+  H            0.195595        4.741126        4.192704
+  O            0.372424        0.043707        7.990575
+  H            0.045790        0.086305        7.046386
+  H            1.368320        0.003612        7.909465
+  O            5.981803        3.515078        6.394590
+  H            6.495988        2.865134        5.834964
+  H            6.223124        3.280479        7.336250
+  O            4.911332        7.968408        1.560195
+  H            4.384624        7.280052        2.058933
+  H            5.794371        7.995961        2.028681
+  O            2.597763        7.437645        5.133227
+  H            2.179804        7.997319        4.417636
+  H            2.711392        8.062588        5.905581
+  O            6.417868        3.354714       -0.039781
+  H            5.748964        3.031668        0.629700
+  H            7.268418        2.893911        0.213636
+  O            8.047516        5.641807        7.203321
+  H            7.930992        4.648656        7.211627
+  H            7.533553        5.960913        7.999568
+  O           -0.018690        2.013484        2.037284
+  H            0.896730        1.632932        2.168362
+  H            0.100108        2.998991        2.158353
+  O            5.373106        5.196922        7.982985
+  H            5.371431        6.195246        8.040789
+  H            4.656244        4.983309        7.319303
+  O            3.047599        3.273471        0.039024
+  H            3.591648        2.434652        0.019295
+  H            3.722286        4.010526       -0.000258
+  O            2.107076        5.828527        0.319423
+  H            1.223335        6.187975        0.019765
+  H            1.882677        4.980756        0.799968
+  O            2.464391        5.942498        7.681354
+  H            2.796357        5.984404        6.738996
+  H            2.414219        6.898038        7.971907
+  O            7.977920        0.977256        7.902976
+  H            7.962347        1.973332        7.990062
+  H            7.284724        0.775509        7.211042
+  O            6.757575        5.876376        1.084948
+  H            6.269497        5.036126        1.321073
+  H            7.722293        5.613118        1.081716
+  O            0.047685        2.767561       -0.011679
+  H            0.994509        2.498720        0.165078
+  H            0.056817        3.766106        0.041424
+  O           -0.088004        5.316743        8.008652
+  H            0.322166        6.228571        8.026639
+  H            0.685368        4.696840        7.875945
+  O            6.980440        6.865169        3.468301
+  H            6.477406        6.057104        3.774867
+  H            7.830935        6.501467        3.088335
+  O            2.403352        7.977562        0.020898
+  H            2.174042        7.982898        0.994235
+  H            3.371749        7.729709       -0.006874
+  O            1.752978        0.455178        0.446412
+  H            0.844520        0.038023        0.420320
+  H            2.218432       -0.005437        1.202178
+  O            4.280790        1.692690        7.990142
+  H            5.192880        1.284672        7.950013
+  H            3.671220        0.977396        7.648421
+  O            0.026451        7.301032        1.629279
+  H            0.102282        7.991106        2.349031
+  H            0.003692        7.827249        0.779236
+  O            4.858861        7.954396        6.708770
+  H            4.240648        7.988679        7.494029
+  H            4.597243        7.121992        6.220247
+  O            0.816228        6.584917        5.919017
+  H            0.573386        7.554743        5.940469
+  H           -0.061518        6.107919        5.873958
+  O            6.872922        0.271592        3.574852
+  H            6.497323        0.006661        4.462958
+  H            6.171544        0.000842        2.915489
