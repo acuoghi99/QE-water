@@ -12,8 +12,8 @@
   ekin_conv_thr = 1.0d-5,                ! convergence criterion for electron minimization
   forc_conv_thr = 1.0d-3,                ! convergence threshold on forces for ionic minimization
   prefix = H2O,                          ! prepend the prefix to input/output filenames and restart folders
-  pseudo_dir = '/home/maglab1/ACuoghi/QE/H2O/pseudo/', ! pseudopotential directory
-  outdir = '/home/maglab1/ACuoghi/QE/H2O/Output/', ! output directory
+  pseudo_dir = '/home/acuoghi/Programmazione/LQSM/Water/QE-water/pseudo/', ! pseudopotential directory
+  outdir = '/home/acuoghi/Programmazione/LQSM/Water/QE-water/Output/', ! output directory
 / 
 
 &SYSTEM

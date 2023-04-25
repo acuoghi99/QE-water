@@ -4,7 +4,7 @@
   restart_mode = 'restart',              ! how to start the simulation
   ndr = 51,                              ! number directory read
   ndw = 51,                              ! number directory write
-  nstep = 300,                           ! number of Car-Parrinello steps performed in this run
+  nstep = 200,                           ! number of Car-Parrinello steps performed in this run
   iprint = 40,                           ! frequency for writing the relevant quantities
   isave = 50,                            ! frequency for writing the restart file
   tprnfor = .TRUE.,                      ! print forces
@@ -13,8 +13,8 @@
   ekin_conv_thr = 1.0d-5,                ! convergence criterion for electron minimization
   forc_conv_thr = 1.0d-3,                ! convergence threshold on forces for ionic minimization
   prefix = H2O,                          ! prepend the prefix to input/output filenames and restart folders
-  pseudo_dir = '/home/maglab1/ACuoghi/QE/H2O/pseudo/', ! pseudopotential directory
-  outdir = '/home/maglab1/ACuoghi/QE/H2O/Output/', ! output directory
+  pseudo_dir = '/home/acuoghi/Programmazione/LQSM/Water/QE-water/pseudo/', ! pseudopotential directory
+  outdir = '/home/acuoghi/Programmazione/LQSM/Water/QE-water/Output/', ! output director
 / 
 
 &SYSTEM
