@@ -53,8 +53,8 @@
   Packing:|0                                                             100%|
           |******************************************
 
-  Restraint-only function value:    3.2049213745435828E-006
-  Maximum violation of the restraints:    1.7828795860518653E-006
+  Restraint-only function value:    3.2049251422446692E-006
+  Maximum violation of the restraints:    1.7828822376946813E-006
 
 --------------------------------------------------------------------------------
 
@@ -75,12 +75,12 @@
   Adjusting random positions to fit the constraints. 
   Packing:|0                                                             100%|
           |
-  Restraint-only function value:    1.7791909126758351E-004
-  Maximum violation of the restraints:    1.4477070650582404E-004
+  Restraint-only function value:    1.7791909447324793E-004
+  Maximum violation of the restraints:    1.4477069919318050E-004
 
 ################################################################################
 
-  Objective function at initial point:    1460.3269150811911     
+  Objective function at initial point:    1460.3269151104889     
 
 ################################################################################
 
@@ -96,20 +96,20 @@
 
   Packing:|0                                                             100%|
           |******************************************************************|
-          |********************************************************
+          |*************************************************
 
-  Function value from last GENCAN loop: f = .28307E-01
+  Function value from last GENCAN loop: f = .22658E-01
   Best function value before: f = .14603E+04
   Improvement from best function value:    99.99 %
   Improvement from last loop:    99.99 %
   Maximum violation of target distance:     0.000000
-  Maximum violation of the constraints: .80926E-02
+  Maximum violation of the constraints: .64433E-02
   Current structure written to file: water_box.xyz
 --------------------------------------------------------------------------------
   Packing solved for molecules of type           1
-  Objective function value:    2.8307303253250211E-002
+  Objective function value:    2.2658013970748396E-002
   Maximum violation of target distance:    0.0000000000000000     
-  Max. constraint violation:    8.0926432255836282E-003
+  Max. constraint violation:    6.4433439871692229E-003
 --------------------------------------------------------------------------------
 
 ################################################################################
@@ -126,9 +126,9 @@
 ################################################################################
 
                                  Success! 
-              Final objective function value: .63741E+00
+              Final objective function value: .11557E+01
               Maximum violation of target distance:   0.000000
-              Maximum violation of the constraints: .80926E-02
+              Maximum violation of the constraints: .64433E-02
 
 --------------------------------------------------------------------------------
 
@@ -141,7 +141,7 @@
 
 ################################################################################
 
-   Running time:    8.75200052E-03  seconds. 
+   Running time:    9.00799967E-03  seconds. 
 
 --------------------------------------------------------------------------------
 
