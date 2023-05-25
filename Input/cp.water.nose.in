@@ -36,7 +36,7 @@
   ion_velocities = 'change_step',        ! set the ionic velocities
   tolp = 20.d0,                          ! old timestep of the restart run
   ion_temperature = 'nose',              ! set how to control the temperature of the ions
-  tempw = 200.d0,                        ! ionic temperature in K
+  tempw = 500.d0,                        ! ionic temperature in K
   fnosep = 10.0,                         ! oscillation frequency of the Nosé–Hoover thermostat (in THz)
   nhpcl = 3,                             ! number of thermostats in the Nosé–Hoover chain
 / 
